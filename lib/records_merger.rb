@@ -1,13 +1,10 @@
 class RecordsMerger
 	def initialize(records: [])
-		@records = []
+		@records = records
 	end
 
 	def merge
-		result = {}
-		records.each do |record|
-			record[]
-		end
+		records.inject(:+).flatten
 	end
 
 	private
